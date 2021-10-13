@@ -1,12 +1,17 @@
 import Image from "next/image";
 import {
     SearchIcon,
-} from "@heroicons/react/outline"
-
+    PlusCircleIcon,
+    UserGroupIcon,
+    HeartIcon,
+    PaperAirplaneIcon,
+    MenuIcon
+} from "@heroicons/react/outline";
+import { HomeIcon } from "@heroicons/react/solid";
 function Header() {
     return (
         <div>
-            <div className="flex justify-between max-w-6xl">
+            <div className="flex justify-between max-w-6xl  mx-5 xl:mx-auto">
                 {/* Left Logo*/}
                 <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
                     <Image src="https://drive.google.com/uc?export=view&id=17FqQM3pP-BVT5ZeeUYgnF_bHgMJw1Qts"
@@ -36,6 +41,14 @@ function Header() {
                 </div>
 
                 {/* Right */}
+                <div className="flex items-center justify-end space-x-4">
+                    <HomeIcon className="navBtn" />
+                    <MenuIcon className="h-6 md:hidden cursor-pointer" />
+                    <PaperAirplaneIcon className="navBtn" />
+                    <PlusCircleIcon className="navBtn" />
+                    <UserGroupIcon className="navBtn" />
+                    <HeartIcon className="navBtn" />
+                </div>
             </div>
         </div>
     )
